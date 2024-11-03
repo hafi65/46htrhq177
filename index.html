@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta  charset="utf-8">
+<meta name="veiwport" >
+<title></title>
+<style> </style>
+
+
+</head>
+<body>
+<h1 id="heading"></h1>
+<p id="para"></p>
+<p id="result"></p>
+<p id="demo"> </p>
+<script> 
+
+    document.getElementById("heading").innerHTML="JavaScript comment";
+    document.getElementById("para").innerHTML="this is <i> my first </i> <b> paragraph</b> <br><br> ";
+
+ var num1 = 46;
+ var num2 = 66;
+ var sum = num1 + num2;
+  document.getElementById("result").innerHTML ="the total sum is: "+ sum;
+
+  var x, y ,z;  // statement
+ var x = 46;  // statement
+ var y = 66; // statement
+ var z = x+ y; // statement
+  document.getElementById("demo").innerHTML ="the total sum is: "+ z + ".";
+</script>
+
+
+
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        input, button {
+            margin: 5px;
+            padding: 10px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="heading">JavaScript Calculator</h1>
+    <p id="para">This is <i>my first</i> <b>calculator</b></p>
+    
+    <input type="number" id="num1" placeholder="Enter first number">
+    <input type="number" id="num2" placeholder="Enter second number">
+    <br>
+    
+    <button onclick="calculate('add')">+</button>
+    <button onclick="calculate('subtract')">-</button>
+    <button onclick="calculate('multiply')">×</button>
+    <br>
+    
+    <p id="result"></p>
+    
+    <script>
+        function calculate(operation) {
+            var num1 = parseFloat(document.getElementById("num1").value);
+            var num2 = parseFloat(document.getElementById("num2").value);
+            var result;
+
+            if (operation === 'add') {
+                result = num1 + num2;
+            }  if (operation === 'subtract') {
+                result = num1 - num2;
+            }  if (operation === 'multiply') {
+                result = num1 * num2;
+            }
+
+            document.getElementById("result").innerHTML = "The result is: " + result;
+        }
+    </script>
+</body>
+</html>
